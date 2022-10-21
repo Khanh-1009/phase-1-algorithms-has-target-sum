@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  
+  for (let i = 0; i < array.length; i++){
+    const comp = target - array[i]
+    for (let j = i+1; j<array.length; j++){
+      if (array[j] === comp){
+        return true
+      }
+    }
+  }
+  return false
 }
 
 /* 
@@ -8,6 +18,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Use Quadractic
+  return true if sum of 1st num and last num, sum 2nd num and 2nd last num equal 10
 */
 
 /*
